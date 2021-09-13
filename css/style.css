@@ -30,7 +30,7 @@ body {
   align-items: center;
   justify-content: center;
  width:100%;
- height:150px;
+ height:120px;
 }
 .search-box input{
   padding:5.7px 8px;
@@ -49,6 +49,11 @@ margin-left: 10px;
   align-items: center;
   justify-content: center;
 }
+.cart-height{
+  /* width: 284px; */
+    height: 110px;
+
+}
 .single-product {
   padding: 3px;
   background: #eeeded;
@@ -64,8 +69,7 @@ padding :20px 10px;
 }
 .single-product:hover {
   box-shadow: 4px 4px 7px gray;
-  border-radius: 10px;
-  border: 1px solid cyan;
+  border-radius: 5px;
 }
 .product-image {
   width: 150px;

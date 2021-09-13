@@ -10,7 +10,7 @@ loadProducts();
 const showProducts = (products) => {
   const allProducts = products.map((pd) => pd);
   for (const product of allProducts) {
-    console.log(product);
+    // console.log(product);
     const image = product.image;
     const div = document.createElement("div");
     div.classList.add("product");
@@ -21,10 +21,10 @@ const showProducts = (products) => {
       <div>
       <img class="product-image" src=${image}></img>
         </div>
-        <h3>${product.title}</h3>
+        <h3 class="cart-height">${product.title.slice(0,50)}</h3>
         <p>Category: ${product.category}</p>
         <h2>Price: <span class="rating-color">$${product.price}<span></h2>
-        <h6>Rating : <span class="rating-color">${product.rating.rate}<span> </h6>
+        <h5>Rating : <span class="rating-color">${product.rating.rate}<span> </h5>
         <div class="rating-color">
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -32,7 +32,7 @@ const showProducts = (products) => {
         <i class="fas fa-star"></i>
         <i class="fas fa-star-half-alt"></i>
         </div>
-        <h6> (<span class="rating-color">${product.rating.count}</span> Review)</h6>
+        <h5> (<span class="rating-color">${product.rating.count}</span> Review)</h5>
         <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
         <button id="details-btn" class="btn btn-danger">Details</button>
 
@@ -96,3 +96,5 @@ const updateTotal = () => {
     getInputValue("total-tax");
   document.getElementById("total").innerText = grandTotal.toFixed(2);
 };
+
+
